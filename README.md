@@ -1,6 +1,6 @@
 Netflix Clone - Laravel Project
 
-## 📌 Table of Contents
+##  Table of Contents
 
 - [1. Objectif du Projet](#objectif-du-projet)
 - [2. Stack Technique](#stack-technique)
