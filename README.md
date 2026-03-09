@@ -20,19 +20,28 @@ FONCTIONNALITES
 
 
 -Catalogue Public : Consultation des films avec filtrage par genre.
+
 -Système d'Authentification : Inscription et connexion sécurisées pour accéder aux fonctionnalités avancées.
+
 -Administration (CRUD) : Création, modification et suppression de films avec validation stricte des données.
+
 -Gestion de Decks (Watchlists) : Création de plusieurs listes par utilisateur.
+
 -Données liées (Pivot) : Ajout de films dans les listes avec un système de priorité (1 à 5) propre à chaque association.
+
 -Interface Responsive : Design sombre "Netflix" adapté aux mobiles et tablettes.
 
 
   PRERIQUIS
 
--Avant d'installer le projet, assurez-vous d'avoir :
+Avant d'installer le projet, assurez-vous d'avoir :
+
 -PHP >= 8.2
+
 -Composer
+
 -Node.js & NPM
+
 -SQLite (ou MySQL selon votre configuration)
 
 
