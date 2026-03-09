@@ -17,7 +17,7 @@ Netflix Clone - Laravel Project
 # objectif-du-projet
 
 
-L'objectif de ce projet est de concevoir une application web inspirée de Netflix permettant de gérer un catalogue de films et des listes de lecture personnalisées (Watchlists). Ce projet valide la maîtrise du framework Laravel, de la gestion des bases de données relationnelles (Many-to-Many) et de l'authentification.
+L'objectif de ce projet est de concevoir une application web inspirée de Netflix permettant de gérer un catalogue de films et des listes de lecture personnalisées (Watchlists). Ce projet valide la maîtrise du framework Laravel, de la gestion des bases de données relationnelles et de l'authentification.
 
 
 # stack-technique
