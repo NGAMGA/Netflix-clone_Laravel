@@ -13,92 +13,73 @@ PRESENTATION DU PROJET
 
 
 Ce projet est une application web de gestion de catalogue de films inspirée de l'interface Netflix. Il a été réalisé dans le cadre d'un examen Laravel pour démontrer la maîtrise du CRUD, des systèmes d'authentification, et des relations entre modèles.
-
 L'application permet aux visiteurs de parcourir un catalogue, tandis que les utilisateurs connectés peuvent administrer les films et gérer leurs propres listes de lecture personnalisées (Watchlists).
 
 
 FONCTIONNALITES
 
 
-Catalogue Public : Consultation des films avec filtrage par genre.
-
-Système d'Authentification : Inscription et connexion sécurisées pour accéder aux fonctionnalités avancées.
-
-Administration (CRUD) : Création, modification et suppression de films avec validation stricte des données.
-
-Gestion de Decks (Watchlists) : Création de plusieurs listes par utilisateur.
-
-Données liées (Pivot) : Ajout de films dans les listes avec un système de priorité (1 à 5) propre à chaque association.
-
-Interface Responsive : Design sombre "Netflix" adapté aux mobiles et tablettes.
+-Catalogue Public : Consultation des films avec filtrage par genre.
+-Système d'Authentification : Inscription et connexion sécurisées pour accéder aux fonctionnalités avancées.
+-Administration (CRUD) : Création, modification et suppression de films avec validation stricte des données.
+-Gestion de Decks (Watchlists) : Création de plusieurs listes par utilisateur.
+-Données liées (Pivot) : Ajout de films dans les listes avec un système de priorité (1 à 5) propre à chaque association.
+-Interface Responsive : Design sombre "Netflix" adapté aux mobiles et tablettes.
 
 
   PRERIQUIS
 
-
-Avant d'installer le projet, assurez-vous d'avoir :
-
-PHP >= 8.2
-
-Composer
-
-Node.js & NPM
-
-SQLite (ou MySQL selon votre configuration)
-
+-Avant d'installer le projet, assurez-vous d'avoir :
+-PHP >= 8.2
+-Composer
+-Node.js & NPM
+-SQLite (ou MySQL selon votre configuration)
 
 
  INSTALLATION
 
-
-Cloner le dépôt :
+-Cloner le dépôt :
 
 git clone https://github.com/NGAMGA/Netflix-clone_Laravel.git
 
 cd netflix-clone
 
-Installer les dépendances PHP :
-
+-Installer les dépendances PHP :
 
 composer install
 
-Installer les dépendances Frontend :
-
+-Installer les dépendances Frontend :
 
 npm install && npm run build
 
+Variables d’environnement (.env)
 
- Variables d’environnement (.env)
-
-
-Copiez le fichier d'exemple et générez la clé d'application :
-
+-Copiez le fichier d'exemple et générez la clé d'application :
 
 cp .env.example .env
 
 php artisan key:generate
 
-Assurez-vous que DB_CONNECTION est configuré sur sqlite (ou votre base de données locale).
+-Assurez-vous que DB_CONNECTION est configuré sur sqlite (ou votre base de données locale).
 
  Base de données
 
-
-Exécutez les migrations pour créer les tables (Movies, Watchlists et la table pivot movie_watchlist) :
-
+-Exécutez les migrations pour créer les tables (Movies, Watchlists et la table pivot movie_watchlist) :
 
 php artisan migrate --seed
 Note : Le --seed remplira automatiquement le catalogue avec des films de test.
 
- Lancer le projet
+ -Lancer le projet
+
 Démarrez le serveur local Laravel :
 
+php artisan serve dans le terminal de Vscode
+npm run dev dans un autre terminal au même moment
 
-php artisan serve
 L'application sera disponible sur http://127.0.0.1:8000.
 
 
- Sécurité et Validation
-
+-Sécurité et Validation
 
 Middleware Auth : Les fonctions d'ajout, de modification et de suppression sont protégées et réservées aux utilisateurs connectés.
 
@@ -107,7 +88,7 @@ Validation des données : Chaque formulaire (Film, Watchlist) valide les types d
 Protection CSRF : Toutes les requêtes POST/PUT/DELETE sont protégées contre les attaques CSRF via les jetons Laravel.
 
 
- Structure des données (Points Clés)
+-Structure des données (Points Clés)
 
 
 Le projet utilise une relation Many-to-Many entre Movie et Watchlist.

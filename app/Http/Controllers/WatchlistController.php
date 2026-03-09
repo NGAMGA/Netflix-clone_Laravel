@@ -18,8 +18,6 @@ class WatchlistController extends Controller
     // LISTER SES WATCHLISTS
     public function index()
 {
-    // Utilise Auth::user()->watchlists 
-    // ou Auth::user()->watchlists()->get()
     $watchlists = Auth::user()->watchlists; 
     
     return view('watchlists.index', compact('watchlists'));

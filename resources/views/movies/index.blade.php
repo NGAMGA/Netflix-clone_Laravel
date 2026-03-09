@@ -44,10 +44,6 @@
                         <div class="d-flex gap-2">
                             <a href="{{ route('movies.show', $movie->id) }}" class="btn btn-outline-light btn-sm w-100">Détails</a>
                             
-                            @auth
-                                
-                                <button class="btn btn-danger btn-sm" title="Ajouter à ma liste">+</button>
-                            @endauth
                         </div>
                     </div>
                 </div>
