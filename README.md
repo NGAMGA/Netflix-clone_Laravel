@@ -1,132 +1,129 @@
 Netflix Clone - Laravel Project
 
-##  Sommaire
-1. [Présentation du projet](#-présentation-du-projet)
-2. [Fonctionnalités](#-fonctionnalités)
-3. [Prérequis](#-prérequis)
-4. [Installation](#-installation)
-5. [Variables d’environnement](#-variables-denvironnement-env)
-6. [Lancer le projet](#-lancer-le-projet)
-7. [Sécurité](#-sécurité-et-validation)
+## 📌 Table of Contents
 
-
-
-1. Présentation du projet
-
-
-Ce projet est une application web de gestion de catalogue de films inspirée de l'interface Netflix. Il a été réalisé dans le cadre d'un examen Laravel pour démontrer la maîtrise du CRUD, des systèmes d'authentification, et des relations entre modèles.
-L'application permet aux visiteurs de parcourir un catalogue, tandis que les utilisateurs connectés peuvent administrer les films et gérer leurs propres listes de lecture personnalisées (Watchlists).
+- [1. Objectif du Projet](#objectif-du-projet)
+- [2. Stack Technique](#stack-technique)
+- [3. Fonctionnalités](#fonctionnalités)
+- [4. Prérequis](#prérequis)
+- [5. Installation](#installation)
+- [6. Variables d'environnement](#variables-denvironnement)
+- [7. Lancer le projet](#lancer-le-projet)
+- [8. Sécurité et Validation](#sécurité-et-validation)
+- [9. Tests et Vérifications](#tests-et-vérifications)
 
 
 
 
-2. Fonctionnalités
-
-
-
--Catalogue Public : Consultation des films avec filtrage par genre.
-
--Système d'Authentification : Inscription et connexion sécurisées pour accéder aux fonctionnalités avancées.
-
--Administration (CRUD) : Création, modification et suppression de films avec validation stricte des données.
-
--Gestion de Decks (Watchlists) : Création de plusieurs listes par utilisateur.
-
--Données liées (Pivot) : Ajout de films dans les listes avec un système de priorité (1 à 5) propre à chaque association.
-
--Interface Responsive : Design sombre "Netflix" adapté aux mobiles et tablettes.
 
 
 
 
-3. Prériquis
+1. Objectif du Projet
+
+
+L'objectif de ce projet est de concevoir une application web inspirée de Netflix permettant de gérer un catalogue de films et des listes de lecture personnalisées (Watchlists). Ce projet valide la maîtrise du framework Laravel, de la gestion des bases de données relationnelles (Many-to-Many) et de l'authentification.
+
+
+2. Stack Technique
+
+
+Framework PHP : Laravel 11+
+
+Frontend : Blade, Bootstrap 5 (Thème sombre personnalisé)
+
+Base de données : SQLite / MySQL
+
+Gestionnaire de paquets : Composer & NPM
+
+
+3. Fonctionnalités
+
+
+Catalogue Public : Consultation des films et filtrage par genre.
+
+CRUD Admin : Ajouter, modifier et supprimer des films avec validation.
+
+Gestion des Decks (Watchlists) : Création, renommage et suppression de plusieurs listes par utilisateur.
+
+Donnée liée (Pivot) : Ajout de films dans les listes avec un système de priorité (1 à 5) spécifique à l'association.
+
+Responsive Design : Interface optimisée pour mobile et tablette via Bootstrap.
 
 
 
-
-Avant d'installer le projet, assurez-vous d'avoir :
-
--PHP >= 8.2
-
--Composer
-
--Node.js & NPM
-
--SQLite (ou MySQL selon votre configuration)
+4. Prérequis
 
 
+PHP >= 8.2
+
+Composer
+
+Node.js & NPM
+
+SQLite (activé dans votre configuration PHP)
 
 
-4. Installation
+5. Installation
 
 
+Cloner le projet :
 
--Cloner le dépôt :
-
+bash
 git clone https://github.com/NGAMGA/Netflix-clone_Laravel.git
 
 cd netflix-clone
 
--Installer les dépendances PHP :
+Installer les dépendances PHP :
 
+Bash
 composer install
+Installer les dépendances JS/CSS :
 
--Installer les dépendances Frontend :
-
-npm install && npm run build
-
-
+Bash
+npm install
 
 
-5. Variables d’environnement (.env)
+6. Variables d'environnement
 
 
+Créez votre fichier .env à partir de l'exemple :
 
-
--Copiez le fichier d'exemple et générez la clé d'application :
-
+Bash
 cp .env.example .env
-
 php artisan key:generate
-
--Assurez-vous que DB_CONNECTION est configuré sur sqlite (ou votre base de données locale).
-
- Base de données
-
--Exécutez les migrations pour créer les tables (Movies, Watchlists et la table pivot movie_watchlist) :
-
-php artisan migrate --seed
-Note : Le --seed remplira automatiquement le catalogue avec des films de test.
+Vérifiez que DB_CONNECTION est configuré sur sqlite dans le fichier .env.
 
 
-
-6. Lancer le projet
-
+7. Lancer le projet
 
 
-Démarrez le serveur local Laravel :
+Pour que l'application fonctionne correctement (Vite pour le CSS et Artisan pour le PHP), vous devez ouvrir deux terminaux différents et les exécuter en même temps :
 
-php artisan serve dans le terminal de Vscode
-npm run dev dans un autre terminal au même moment
+Terminal 1 (Serveur PHP) :
 
-L'application sera disponible sur http://127.0.0.1:8000.
+Bash
+php artisan serve
+Terminal 2 (Compilation Assets) :
 
-
-
-7. Sécurité et Validation
-
-
-
-Middleware Auth : Les fonctions d'ajout, de modification et de suppression sont protégées et réservées aux utilisateurs connectés.
-
-Validation des données : Chaque formulaire (Film, Watchlist) valide les types de données, les longueurs de chaînes et les plages de valeurs (ex: priorité entre 1 et 5).
-
-Protection CSRF : Toutes les requêtes POST/PUT/DELETE sont protégées contre les attaques CSRF via les jetons Laravel.
+Bash
+npm run dev
+Note : N'oubliez pas de lancer les migrations lors du premier lancement : php artisan migrate --seed.
 
 
--Structure des données (Points Clés)
+ 8. Sécurité et Validation
 
 
-Le projet utilise une relation Many-to-Many entre Movie et Watchlist.
+Authentification : Accès restreint aux fonctionnalités CRUD pour les invités.
 
-La table pivot contient une colonne supplémentaire priority, permettant de classer les films au sein de chaque liste.
+Validation : Contrôle strict des types de données (ex: priorité numérique 1-5).
+
+Protection CSRF : Sécurisation de tous les formulaires via @csrf.
+
+
+9. Tests et Vérifications
+
+
+Des tests manuels ont été effectués pour vérifier la suppression en cascade (un film supprimé du catalogue disparaît des listes).
+
+Multi-Decks : Vérification de la possibilité de créer plusieurs listes distinctes pour un même utilisateur.
