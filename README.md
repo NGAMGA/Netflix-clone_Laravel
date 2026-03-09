@@ -29,7 +29,7 @@ Frontend : Blade, Bootstrap 5
 
 Base de données : SQLite / MySQL
 
-Gestionnaire de paquets : Composer & NPM
+Gestionnaire de paquets : Composer & npm
 
 
 # fonctionnalités
@@ -39,9 +39,9 @@ Catalogue Public : Consultation des films et filtrage par genre.
 
 CRUD Admin : Ajouter, modifier et supprimer des films avec validation.
 
-Gestion des Decks (Watchlists) : Création, renommage et suppression de plusieurs listes par utilisateur.
+Gestion des Watchlists : Création, renommage et suppression de plusieurs listes par utilisateur.
 
-Donnée liée (Pivot) : Ajout de films dans les listes avec un système de priorité (1 à 5) spécifique à l'association.
+Donnée liée : Ajout de films dans les listes avec un système de priorité (1 à 5) spécifique à l'association.
 
 Responsive Design : Interface optimisée pour mobile et tablette via Bootstrap.
 
@@ -99,12 +99,12 @@ Vérifiez que DB_CONNECTION est configuré sur sqlite dans le fichier .env.
 Pour que l'application fonctionne correctement (Vite pour le CSS et Artisan pour le PHP), vous devez ouvrir deux terminaux différents et les exécuter en même temps :
 
 
-Terminal 1 (Serveur PHP) :
+Terminal 1  :
 
 php artisan serve
 
 
-Terminal 2 (Compilation Assets) :
+Terminal 2  :
 
 
 npm run dev
