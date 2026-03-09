@@ -10,6 +10,7 @@ Netflix Clone - Laravel Project
 7. [Sécurité](#-sécurité-et-validation)
 
 
+
 1. Présentation du projet
 
 
@@ -18,7 +19,9 @@ L'application permet aux visiteurs de parcourir un catalogue, tandis que les uti
 
 
 
+
 2. Fonctionnalités
+
 
 
 -Catalogue Public : Consultation des films avec filtrage par genre.
@@ -35,7 +38,9 @@ L'application permet aux visiteurs de parcourir un catalogue, tandis que les uti
 
 
 
+
 3. Prériquis
+
 
 
 
@@ -51,7 +56,9 @@ Avant d'installer le projet, assurez-vous d'avoir :
 
 
 
+
 4. Installation
+
 
 
 -Cloner le dépôt :
@@ -70,7 +77,9 @@ npm install && npm run build
 
 
 
+
 5. Variables d’environnement (.env)
+
 
 
 
@@ -90,7 +99,9 @@ php artisan migrate --seed
 Note : Le --seed remplira automatiquement le catalogue avec des films de test.
 
 
+
 6. Lancer le projet
+
 
 
 Démarrez le serveur local Laravel :
@@ -101,7 +112,9 @@ npm run dev dans un autre terminal au même moment
 L'application sera disponible sur http://127.0.0.1:8000.
 
 
+
 7. Sécurité et Validation
+
 
 
 Middleware Auth : Les fonctions d'ajout, de modification et de suppression sont protégées et réservées aux utilisateurs connectés.
