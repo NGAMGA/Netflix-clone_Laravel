@@ -9,14 +9,16 @@ Netflix Clone - Laravel Project
 6. [Lancer le projet](#-lancer-le-projet)
 7. [Sécurité](#-sécurité-et-validation)
 
-1. PRESENTATION DU PROJET
+
+1. Présentation du projet
 
 
 Ce projet est une application web de gestion de catalogue de films inspirée de l'interface Netflix. Il a été réalisé dans le cadre d'un examen Laravel pour démontrer la maîtrise du CRUD, des systèmes d'authentification, et des relations entre modèles.
 L'application permet aux visiteurs de parcourir un catalogue, tandis que les utilisateurs connectés peuvent administrer les films et gérer leurs propres listes de lecture personnalisées (Watchlists).
 
 
-2. FONCTIONNALITES
+
+2. Fonctionnalités
 
 
 -Catalogue Public : Consultation des films avec filtrage par genre.
@@ -32,7 +34,10 @@ L'application permet aux visiteurs de parcourir un catalogue, tandis que les uti
 -Interface Responsive : Design sombre "Netflix" adapté aux mobiles et tablettes.
 
 
-3. PRERIQUIS
+
+3. Prériquis
+
+
 
 Avant d'installer le projet, assurez-vous d'avoir :
 
@@ -45,7 +50,8 @@ Avant d'installer le projet, assurez-vous d'avoir :
 -SQLite (ou MySQL selon votre configuration)
 
 
-4. INSTALLATION
+
+4. Installation
 
 
 -Cloner le dépôt :
@@ -63,7 +69,9 @@ composer install
 npm install && npm run build
 
 
+
 5. Variables d’environnement (.env)
+
 
 
 -Copiez le fichier d'exemple et générez la clé d'application :
@@ -84,6 +92,7 @@ Note : Le --seed remplira automatiquement le catalogue avec des films de test.
 
 6. Lancer le projet
 
+
 Démarrez le serveur local Laravel :
 
 php artisan serve dans le terminal de Vscode
@@ -93,6 +102,7 @@ L'application sera disponible sur http://127.0.0.1:8000.
 
 
 7. Sécurité et Validation
+
 
 Middleware Auth : Les fonctions d'ajout, de modification et de suppression sont protégées et réservées aux utilisateurs connectés.
 
