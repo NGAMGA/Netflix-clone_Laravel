@@ -70,18 +70,11 @@ git clone https://github.com/NGAMGA/Netflix-clone_Laravel.git
 cd netflix-clone
 
 
-- Installer les dépendances PHP :
+- Installer les dépendances
 
 
 ```bash
-composer install
-```
-
-- Installer les dépendances JS/CSS :
-
-
-```bash
-npm install
+composer run setup
 ```
 
 # variables-denvironnement
