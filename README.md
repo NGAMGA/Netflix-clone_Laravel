@@ -13,6 +13,15 @@ Netflix Clone - Laravel Project
 - [9. Tests et Vérifications](#tests-et-vérifications)
 
 
+- # objectif-du-projet
+- # stack-technique
+- # fonctionnalités
+- # prérequis
+- # installation
+- # variables-denvironnement
+- # lancer-le-projet
+- # sécurité-et-validation
+- # tests-et-vérifications
 
 
 
