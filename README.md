@@ -7,7 +7,6 @@ Netflix Clone - Laravel Project
 - [3. Fonctionnalités](#fonctionnalités)
 - [4. Prérequis](#prérequis)
 - [5. Installation](#installation)
-- [6. Variables d'environnement](#variables-denvironnement)
 - [7. Lancer le projet](#lancer-le-projet)
 - [8. Sécurité et Validation](#sécurité-et-validation)
 - [9. Tests et Vérifications](#tests-et-vérifications)
@@ -76,16 +75,6 @@ cd netflix-clone
 ```bash
 composer run setup
 ```
-
-# variables-denvironnement
-
-
-Créez votre fichier .env à partir de l'exemple :
-
-
-cp .env.example .env
-php artisan key:generate
-Vérifiez que DB_CONNECTION est configuré sur sqlite dans le fichier .env.
 
 
 # lancer-le-projet
