@@ -25,7 +25,6 @@ class MovieController extends Controller
 
     }
 
-    // On récupère les films de manière aléatoire pour l'effet "Netflix"
 
     $movies = $query->inRandomOrder()->get();
 
@@ -68,7 +67,7 @@ public function store(Request $request)
     return redirect()->route('movies.index')->with('success', 'Le film a été ajouté au catalogue avec succès !');
 }
 
-// Affiche le formulaire de modification
+// Affiche le formulaire de modification2
 public function edit($id)
 {
     $movie = Movie::findOrFail($id);

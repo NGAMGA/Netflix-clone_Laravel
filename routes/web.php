@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\MovieController;
 use App\Http\Controllers\WatchlistController;
 
-// Redirection de l'accueil vers le catalogue
+
 Route::get('/', function () {
     return redirect()->route('movies.index');
 });
@@ -29,7 +29,7 @@ Route::middleware(['auth'])->group(function () {
     Route::post('/watchlists/add-movie', [WatchlistController::class, 'addMovie'])->name('watchlists.addMovie');
     Route::delete('/watchlists/{watchlist}/remove-movie/{movie}', [WatchlistController::class, 'removeMovie'])->name('watchlists.removeMovie');
 
-    // ADMINISTRATION DES FILMS (CRUD)
+    
    
     // On définit uniquement les routes de création, modification et suppression.
     Route::get('/admin/movies/create', [MovieController::class, 'create'])->name('movies.create');
