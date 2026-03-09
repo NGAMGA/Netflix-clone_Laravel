@@ -110,8 +110,10 @@ Terminal 1  :
 Terminal 2  :
 
 ```bash
-- npm run dev
+ npm run dev
 ```
+
+L'application sera disponible sur http://127.0.0.1:8000.
 
 Note : N'oubliez pas de lancer les migrations lors du premier lancement : php artisan migrate --seed.
 
