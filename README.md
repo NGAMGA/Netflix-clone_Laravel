@@ -23,46 +23,46 @@ L'objectif de ce projet est de concevoir une application web inspirée de Netfli
 # stack-technique
 
 
-Framework PHP : Laravel 11+
+- Framework PHP : Laravel 11+
 
-Frontend : Blade, Bootstrap 5
+- Frontend : Blade, Bootstrap 5
 
-Base de données : SQLite / MySQL
+- Base de données : SQLite / MySQL
 
-Gestionnaire de paquets : Composer & npm
+- Gestionnaire de paquets : Composer & npm
 
 
 # fonctionnalités
 
 
-Catalogue Public : Consultation des films et filtrage par genre.
+- Catalogue Public : Consultation des films et filtrage par genre.
 
-CRUD Admin : Ajouter, modifier et supprimer des films avec validation.
+- CRUD Admin : Ajouter, modifier et supprimer des films avec validation.
 
-Gestion des Watchlists : Création, renommage et suppression de plusieurs listes par utilisateur.
+- Gestion des Watchlists : Création, renommage et suppression de plusieurs listes par utilisateur.
 
-Donnée liée : Ajout de films dans les listes avec un système de priorité (1 à 5) spécifique à l'association.
+- Donnée liée : Ajout de films dans les listes avec un système de priorité (1 à 5) spécifique à l'association.
 
-Responsive Design : Interface optimisée pour mobile et tablette via Bootstrap.
+- Responsive Design : Interface optimisée pour mobile et tablette via Bootstrap.
 
 
 
 # prérequis
 
 
-PHP >= 8.2
+- PHP >= 8.2
 
-Composer
+- Composer
 
-Node.js & NPM
+- Node.js & npm
 
-SQLite (activé dans votre configuration PHP)
+- SQLite (activé dans votre configuration PHP)
 
 
 # installation
 
 
-Cloner le projet :
+- Cloner le projet :
 
 
 git clone https://github.com/NGAMGA/Netflix-clone_Laravel.git
@@ -87,7 +87,7 @@ npm install
 
 Créez votre fichier .env à partir de l'exemple :
 
-Bash
+
 cp .env.example .env
 php artisan key:generate
 Vérifiez que DB_CONNECTION est configuré sur sqlite dans le fichier .env.
@@ -101,13 +101,14 @@ Pour que l'application fonctionne correctement (Vite pour le CSS et Artisan pour
 
 Terminal 1  :
 
-php artisan serve
+- php artisan serve
 
 
 Terminal 2  :
 
 
-npm run dev
+- npm run dev
+
 Note : N'oubliez pas de lancer les migrations lors du premier lancement : php artisan migrate --seed.
 
 
@@ -115,16 +116,16 @@ Note : N'oubliez pas de lancer les migrations lors du premier lancement : php ar
 # sécurité-et-validation
 
 
-Authentification : Accès restreint aux fonctionnalités CRUD pour les invités.
+- Authentification : Accès restreint aux fonctionnalités CRUD pour les invités.
 
-Validation : Contrôle strict des types de données (ex: priorité numérique 1-5).
+- Validation : Contrôle strict des types de données (ex: priorité numérique 1-5).
 
-Protection CSRF : Sécurisation de tous les formulaires via @csrf.
+- Protection CSRF : Sécurisation de tous les formulaires via @csrf.
 
 
 # tests-et-vérifications
 
 
-Des tests manuels ont été effectués pour vérifier la suppression en cascade (un film supprimé du catalogue disparaît des listes).
+- Des tests manuels ont été effectués pour vérifier la suppression en cascade (un film supprimé du catalogue disparaît des listes).
 
-Multi-Decks : Vérification de la possibilité de créer plusieurs listes distinctes pour un même utilisateur.
+- Multi-Decks : Vérification de la possibilité de créer plusieurs listes distinctes pour un même utilisateur.
