@@ -72,11 +72,13 @@ cd netflix-clone
 
 - Installer les dépendances PHP :
 
+
 ```bash
 composer install
-``
+```
 
 - Installer les dépendances JS/CSS :
+
 
 ```bash
 npm install
