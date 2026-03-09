@@ -25,7 +25,7 @@ L'objectif de ce projet est de concevoir une application web inspirée de Netfli
 
 Framework PHP : Laravel 11+
 
-Frontend : Blade, Bootstrap 5 (Thème sombre personnalisé)
+Frontend : Blade, Bootstrap 5
 
 Base de données : SQLite / MySQL
 
@@ -64,18 +64,21 @@ SQLite (activé dans votre configuration PHP)
 
 Cloner le projet :
 
-bash
+
 git clone https://github.com/NGAMGA/Netflix-clone_Laravel.git
 
 cd netflix-clone
 
-Installer les dépendances PHP :
 
-Bash
+- Installer les dépendances PHP :
+
+
 composer install
-Installer les dépendances JS/CSS :
 
-Bash
+
+- Installer les dépendances JS/CSS :
+
+
 npm install
 
 
@@ -95,13 +98,15 @@ Vérifiez que DB_CONNECTION est configuré sur sqlite dans le fichier .env.
 
 Pour que l'application fonctionne correctement (Vite pour le CSS et Artisan pour le PHP), vous devez ouvrir deux terminaux différents et les exécuter en même temps :
 
+
 Terminal 1 (Serveur PHP) :
 
-Bash
 php artisan serve
+
+
 Terminal 2 (Compilation Assets) :
 
-Bash
+
 npm run dev
 Note : N'oubliez pas de lancer les migrations lors du premier lancement : php artisan migrate --seed.
 
