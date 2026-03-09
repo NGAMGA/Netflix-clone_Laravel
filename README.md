@@ -72,15 +72,15 @@ cd netflix-clone
 
 - Installer les dépendances PHP :
 
-
+```bash
 composer install
-
+``
 
 - Installer les dépendances JS/CSS :
 
-
+```bash
 npm install
-
+```
 
 # variables-denvironnement
 
@@ -101,13 +101,15 @@ Pour que l'application fonctionne correctement (Vite pour le CSS et Artisan pour
 
 Terminal 1  :
 
-- php artisan serve
-
+```bash
+ php artisan serve
+```
 
 Terminal 2  :
 
-
+```bash
 - npm run dev
+```
 
 Note : N'oubliez pas de lancer les migrations lors du premier lancement : php artisan migrate --seed.
 
