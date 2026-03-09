@@ -13,28 +13,14 @@ Netflix Clone - Laravel Project
 - [9. Tests et Vérifications](#tests-et-vérifications)
 
 
-- # objectif-du-projet
-- # stack-technique
-- # fonctionnalités
-- # prérequis
-- # installation
-- # variables-denvironnement
-- # lancer-le-projet
-- # sécurité-et-validation
-- # tests-et-vérifications
 
-
-
-
-
-
-1. Objectif du Projet
+# objectif-du-projet
 
 
 L'objectif de ce projet est de concevoir une application web inspirée de Netflix permettant de gérer un catalogue de films et des listes de lecture personnalisées (Watchlists). Ce projet valide la maîtrise du framework Laravel, de la gestion des bases de données relationnelles (Many-to-Many) et de l'authentification.
 
 
-2. Stack Technique
+# stack-technique
 
 
 Framework PHP : Laravel 11+
@@ -46,7 +32,7 @@ Base de données : SQLite / MySQL
 Gestionnaire de paquets : Composer & NPM
 
 
-3. Fonctionnalités
+# fonctionnalités
 
 
 Catalogue Public : Consultation des films et filtrage par genre.
@@ -61,7 +47,7 @@ Responsive Design : Interface optimisée pour mobile et tablette via Bootstrap.
 
 
 
-4. Prérequis
+# prérequis
 
 
 PHP >= 8.2
@@ -73,7 +59,7 @@ Node.js & NPM
 SQLite (activé dans votre configuration PHP)
 
 
-5. Installation
+# installation
 
 
 Cloner le projet :
@@ -93,7 +79,7 @@ Bash
 npm install
 
 
-6. Variables d'environnement
+# variables-denvironnement
 
 
 Créez votre fichier .env à partir de l'exemple :
@@ -104,7 +90,7 @@ php artisan key:generate
 Vérifiez que DB_CONNECTION est configuré sur sqlite dans le fichier .env.
 
 
-7. Lancer le projet
+# lancer-le-projet
 
 
 Pour que l'application fonctionne correctement (Vite pour le CSS et Artisan pour le PHP), vous devez ouvrir deux terminaux différents et les exécuter en même temps :
@@ -120,7 +106,8 @@ npm run dev
 Note : N'oubliez pas de lancer les migrations lors du premier lancement : php artisan migrate --seed.
 
 
- 8. Sécurité et Validation
+
+# sécurité-et-validation
 
 
 Authentification : Accès restreint aux fonctionnalités CRUD pour les invités.
@@ -130,7 +117,7 @@ Validation : Contrôle strict des types de données (ex: priorité numérique 1-
 Protection CSRF : Sécurisation de tous les formulaires via @csrf.
 
 
-9. Tests et Vérifications
+# tests-et-vérifications
 
 
 Des tests manuels ont été effectués pour vérifier la suppression en cascade (un film supprimé du catalogue disparaît des listes).
